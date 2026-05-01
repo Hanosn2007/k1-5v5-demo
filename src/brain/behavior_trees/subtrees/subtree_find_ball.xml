@@ -1,0 +1,21 @@
+<!-- 摄像头跟踪球 -->
+
+<root BTCPP_format="4" >
+  <BehaviorTree ID="FindBall">
+     <Sequence name="root">
+        <ReactiveSequence>
+            <GoBackInField />
+            <CamFastScan />
+        </ReactiveSequence>
+        <TurnOnSpot rad="2.4"  towards_ball="true"/>
+        <ReactiveSequence>
+            <GoBackInField />
+            <CamFastScan />
+        </ReactiveSequence>
+        <ReactiveSequence>
+          <GoToReadyPosition  vx_limit="0.9" />
+          <Sleep msec="1200" />
+        </ReactiveSequence>
+      </Sequence>
+  </BehaviorTree>
+</root>

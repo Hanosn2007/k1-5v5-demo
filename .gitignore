@@ -1,0 +1,17 @@
+build/
+install/
+log/
+*.log
+
+.DS_Store
+._*
+__MACOSX/
+
+*.zip
+
+src/brain/config/config_local.yaml
+
+# Large generated/runtime binaries are kept on robot/local disk, not in git.
+src/vision/model/*.engine
+src/vision/thirdparty/lib/*.so*
+src/vision/thirdparty/lib/*.a
